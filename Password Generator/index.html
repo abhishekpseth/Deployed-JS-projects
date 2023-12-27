@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="index.js" defer></script>
+    <script
+      src="https://kit.fontawesome.com/84501bcaec.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+      defer
+    ></script>
+    <title>Password Generator</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <h2>
+          <i class="fa-solid fa-lock" style="color: #dc5a14"></i> Password
+          Generator
+        </h2>
+        <div class="output-area">
+          <p id="outputPassword"></p>
+          <i class="fa-regular fa-copy fa-2xs" onclick="copytoClipBoard()"></i>
+        </div>
+        <h4 id="passwordLengthArea">Password Length: 0</h4>
+        <form id="generatePasswordForm" onsubmit="generate(event)">
+          <input
+            type="range"
+            name="range"
+            min="0"
+            max="20"
+            value="0"
+            oninput="changePasswordLength(this.value)"
+          />
+          <div class="options">
+            <span
+              ><label for="uppercase">Include uppercase</label
+              ><input type="checkbox" name="uppercase" id="uppercase"
+            /></span>
+            <span
+              ><label for="numbers">Include Numbers</label
+              ><input type="checkbox" name="numbers" id="numbers"
+            /></span>
+            <span
+              ><label for="symbols">Include Symbols</label
+              ><input type="checkbox" name="symbols" id="symbols"
+            /></span>
+          </div>
+          <button type="submit">Generate Password</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

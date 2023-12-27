@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="index.js" defer></script>
+    <script
+      src="https://kit.fontawesome.com/84501bcaec.js"
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <title>Expense Tracker</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <h5>Expense Tracker</h5>
+        <br />
+        <h5 id="balanceValue" class="balance">₹ 0</h5>
+        <h6>Your Balance</h6>
+        <br />
+        <div class="transactions">
+          <h6>Transactions</h6>
+          <hr />
+          <div class="all-transactions" id="allTransactons"></div>
+        </div>
+
+        <div class="calculation">
+          <form
+            class="operations"
+            id="operations"
+            onsubmit="transaction(event)"
+          >
+            <h6>Add Transaction</h6>
+            <div class="enter-transaction">
+              <div class="enter-text">
+                <p>Text</p>
+                <input
+                  type="text"
+                  id="inputText"
+                  name="inputText"
+                  placeholder="Enter text..."
+                  required
+                />
+              </div>
+              <div class="enter-amount">
+                <p>Amount</p>
+                <input
+                  type="number"
+                  id="inputValue"
+                  name="value"
+                  placeholder="Enter amount..."
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="buttons">
+              <button
+                type="submit"
+                onclick="buttonPressed='earning'"
+                style="background-color: green"
+              >
+                <h6>
+                  <div class="value" id="earningValue">₹ 0</div>
+                  Earnings
+                </h6>
+              </button>
+              <button
+                type="submit"
+                onclick="buttonPressed='expense'"
+                style="background-color: red"
+              >
+                <h6>
+                  <div class="value" id="expenseValue">₹ 0</div>
+                  Expenses
+                </h6>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

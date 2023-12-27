@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap");
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "Oswald", sans-serif;
+  font-size: 62.5%;
+}
+body {
+    font-size: 1.6rem;
+}
+
+.container{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+}
+
+.search-box{
+    display: flex;
+    width: 50%;
+    max-width: 60rem;
+    gap: 1rem;
+}
+
+.search-box input{
+    padding: 0.5rem 1rem;
+    width: 100%;
+    outline: 2px solid #ccc;
+    border: none;
+}
+.search-box input:focus-visible {
+    outline: 2px solid purple;
+    border: none;
+}
+
+.search-box button{
+    height: 100%;
+    padding: 0.5rem 1rem;
+    background-color: rgb(227, 43, 197);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+
+.search-box button:hover{
+    background:  rgba(55, 1, 55, 0.788);
+}
+
+.search-box button:active{
+    background: rgba(231, 59, 231, 0.788);
+}
+
+/* card section */
+.card-container{
+    width: 100%;
+}
+.card{
+    margin: auto;
+    max-width: 50rem;
+    border-radius: 5px;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+    padding: 4rem 2rem;
+    display: flex;
+    flex-direction: column;
+    transition: 0.5s ease-in;
+}
+
+.card:hover{
+    transform: scale(1.05);
+    transition: 0.5s ease-in;
+}
+
+.card img{
+    width: 70px;
+    height: 70px;
+    border-radius: 50px;
+}
+
+.profile{
+    display: flex;
+    justify-content: space-between;
+}
+
+.profile button{
+    align-self: center;
+    padding: 5px;
+    background-color: rgb(227, 43, 197);
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.profile .left{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.profile .left h1{
+    font-size: 1.6rem;
+}
+
+.about{
+    margin: 1.5rem;
+}
+
+.about h4{
+    font-weight: 200;
+}
+
+.status{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+}
+
+.status-item{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: 500;
+}

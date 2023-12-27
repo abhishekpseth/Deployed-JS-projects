@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  height: 100vh;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.game-board {
+  margin-top: 13vh;
+  height: 60vh;
+  width: 60vh;
+  background-color: black;
+  display: grid;
+  grid-template-areas:
+    "I1 I2 I3"
+    "I4 I5 I6"
+    "I7 I8 I9";
+}
+
+.item {
+  width: 20vh;
+  height: 20vh;
+  display: grid;
+  place-content: center;
+  color: white;
+  font: 80px "Raleway", sans-serif;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+#item1 {
+  grid-area: I1;
+  border-right: 1.5px solid white;
+  border-bottom: 1.5px solid white;
+}
+
+#item2 {
+  grid-area: I2;
+  border-left: 1.5px solid white;
+  border-right: 1.5px solid white;
+  border-bottom: 1.5px solid white;
+}
+
+#item3 {
+  grid-area: I3;
+  border-left: 1.5px solid white;
+  border-bottom: 1.5px solid white;
+}
+
+#item4 {
+  grid-area: I4;
+  border-top: 1.5px solid white;
+  border-right: 1.5px solid white;
+  border-bottom: 1.5px solid white;
+}
+
+#item5 {
+  grid-area: I5;
+  border: 1.5px solid white;
+  border-top: 1.5px solid white;
+  border-left: 1.5px solid white;
+  border-bottom: 1.5px solid white;
+}
+
+#item6 {
+  grid-area: I6;
+  border-top: 1.5px solid white;
+  border-left: 1.5px solid white;
+  border-bottom: 1.5px solid white;
+}
+
+#item7 {
+  grid-area: I7;
+  border-top: 1.5px solid white;
+  border-right: 1.5px solid white;
+}
+
+#item8 {
+  grid-area: I8;
+  border-top: 1.5px solid white;
+  border-left: 1.5px solid white;
+  border-right: 1.5px solid white;
+}
+
+#item9 {
+  grid-area: I9;
+  border-top: 1.5px solid white;
+  border-left: 1.5px solid white;
+}
+
+.score-board {
+  position: absolute;
+  top: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  gap: 40px;
+}
+
+.player1,
+.tie,
+.player2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.player1 {
+  border: 1px solid white;
+  padding: 2px 10px;
+  border-radius: 10px;
+  transition: 0.3s ease-in-out;
+}
+
+.player2 {
+  border: 1px solid transparent;
+  padding: 2px 10px;
+  border-radius: 10px;
+  transition: 0.3s ease-in-out;
+}
+
+.top {
+  font: 20px "Raleway", sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.bottom {
+  font: 45px "Raleway", sans-serif;
+}

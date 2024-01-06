@@ -59,12 +59,15 @@ const getTodaysDate = (date) => {
 
 setInterval(() => {
   const date = new Date();
-  const seconds = date.getSeconds();
-  const minutes = date.getMinutes();
-  const hours = date.getHours();
+  let seconds = date.getSeconds();
+  let minutes = date.getMinutes();
+  let hours = date.getHours(); //0-23
   const secondsDeg = seconds * 6;
-  const minutesdDeg = minutes * 6;
-  const hoursDeg = (hours - 12) * 30;
+  const minutesdDeg = minutes * 6 + seconds * 0.1;
+  const hoursDeg =
+    (hours >= 12 ? (hours - 12) * 30 : hours * 30) +
+    minutes * 0.5 +
+    seconds * (1 / 120);
   const dayNo = date.getDay();
   secondNeedleEl.style.transform = `rotate(${secondsDeg}deg)`;
   minuteNeedleEl.style.transform = `rotate(${minutesdDeg}deg)`;
